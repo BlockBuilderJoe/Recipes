@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Recipes</title>
+    <meta
+      name="description"
+      content="Simple, scalable recipes for everyday cooking."
+    >
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/recipes/styles.css">
+    <script type="module" src="/recipes/app.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <nav class="section-switcher" aria-label="Sections" id="section-switcher"></nav>
+
+      <section class="landing-view" id="landing-view" aria-labelledby="landing-title">
+        <div class="landing-hero">
+          <p class="eyebrow" id="landing-eyebrow"></p>
+          <h1 id="landing-title">Recipes</h1>
+          <p class="source-note" id="landing-source" hidden></p>
+        </div>
+
+        <section class="recipe-flow" id="recipe-list" aria-label="Recipe list"></section>
+      </section>
+
+      <div class="recipe-view" id="recipe-view" hidden>
+        <nav class="recipe-switcher" aria-label="Recipes" id="recipe-switcher"></nav>
+        <p class="source-note" id="detail-source" hidden></p>
+
+        <section class="recipe-hero" aria-labelledby="recipe-title">
+          <div>
+            <p class="eyebrow" id="recipe-kicker"></p>
+            <h1 id="recipe-title"></h1>
+            <p class="dek" id="recipe-description"></p>
+          </div>
+
+          <aside class="servings-panel" id="servings-panel" aria-label="Recipe controls">
+            <label for="servings">Servings</label>
+            <div class="serving-controls">
+              <button type="button" id="decrease-servings" aria-label="Decrease servings">-</button>
+              <input id="servings" type="number" min="1" step="1" inputmode="numeric">
+              <button type="button" id="increase-servings" aria-label="Increase servings">+</button>
+            </div>
+            <p id="base-servings"></p>
+          </aside>
+        </section>
+
+        <section class="meta-grid" aria-label="Recipe details">
+          <article>
+            <span id="total-time-label">Total time</span>
+            <strong id="total-time"></strong>
+          </article>
+          <article>
+            <span id="yield-label">Base yield</span>
+            <strong id="yield"></strong>
+          </article>
+          <article>
+            <span id="storage-summary-label">Storage</span>
+            <strong id="storage-summary"></strong>
+          </article>
+        </section>
+
+        <section class="content-grid">
+          <section class="ingredients-summary" aria-labelledby="ingredients-heading">
+            <h2 id="ingredients-heading">Ingredients</h2>
+            <ul class="ingredient-list" id="ingredients"></ul>
+
+            <section class="shopping-panel" id="shopping-panel" aria-labelledby="shopping-heading">
+              <div class="shopping-header">
+                <h3 id="shopping-heading">Shopping list</h3>
+                <div class="shopping-actions">
+                  <button type="button" id="copy-shopping-list">Copy</button>
+                  <button type="button" id="share-shopping-list">Share</button>
+                  <button type="button" id="open-reminders">Open in Reminders</button>
+                </div>
+              </div>
+              <textarea id="shopping-list" readonly rows="8" aria-label="Shopping list"></textarea>
+              <p class="shopping-status" id="shopping-status" aria-live="polite"></p>
+            </section>
+          </section>
+
+          <section class="process-section" aria-labelledby="method-heading">
+            <h2 id="method-heading">Process</h2>
+            <ol class="process-list" id="method"></ol>
+          </section>
+        </section>
+
+        <section class="notes-grid">
+          <article>
+            <h2>Optional add-ins</h2>
+            <ul id="add-ins"></ul>
+          </article>
+          <article>
+            <h2>Serving suggestions</h2>
+            <ul id="serving-suggestions"></ul>
+          </article>
+          <article>
+            <h2>Storage</h2>
+            <ul id="storage"></ul>
+          </article>
+        </section>
+      </div>
+
+      <section class="not-found-view" id="not-found-view" aria-labelledby="not-found-title" hidden>
+        <p class="eyebrow">404</p>
+        <h1 id="not-found-title">Nothing Here</h1>
+        <p class="dek">This page does not exist. Head back to recipes or tools.</p>
+        <div class="not-found-actions">
+          <a href="/recipes/">Recipes</a>
+          <a href="/tools/">Tools</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
