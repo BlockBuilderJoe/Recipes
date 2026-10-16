@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "recipes",
+  "main": "./src/index.js",
+  "compatibility_date": "2026-04-24",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "none"
+  },
+  "routes": [
+    {
+      "pattern": "josephpalmer.co.uk/*",
+      "zone_name": "josephpalmer.co.uk"
+    },
+    {
+      "pattern": "www.josephpalmer.co.uk/*",
+      "zone_name": "josephpalmer.co.uk"
+    }
+  ]
+}

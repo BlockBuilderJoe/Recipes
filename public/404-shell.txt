@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Page Not Found</title>
+    <meta name="description" content="Page not found.">
+    <link rel="icon" href="data:,">
+    <link rel="stylesheet" href="/recipes/styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <nav class="section-switcher" aria-label="Sections">
+        <a href="/recipes/">Recipes</a>
+        <a href="/tools/">Tools</a>
+      </nav>
+
+      <section class="not-found-view" aria-labelledby="not-found-title">
+        <p class="eyebrow">404</p>
+        <h1 id="not-found-title">Nothing Here</h1>
+        <p class="dek">This page does not exist. Head back to recipes or tools.</p>
+        <div class="not-found-actions">
+          <a href="/recipes/">Recipes</a>
+          <a href="/tools/">Tools</a>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

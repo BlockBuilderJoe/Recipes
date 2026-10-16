@@ -1,0 +1,16 @@
+{
+  "name": "recipes",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build:pages": "node scripts/build-pages.mjs",
+    "dev": "wrangler dev --port 8787",
+    "deploy:pages": "npm run build:pages && wrangler pages deploy .pages-dist --project-name recipes --branch main --commit-dirty=true",
+    "deploy": "wrangler deploy",
+    "check": "wrangler deploy --dry-run"
+  },
+  "devDependencies": {
+    "wrangler": "^4.83.0"
+  }
+}
